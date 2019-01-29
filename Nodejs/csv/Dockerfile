@@ -1,4 +1,4 @@
-FROM node:8.10.0-alpine
+FROM node:10.15.0-alpine
 
 WORKDIR /usr/src/app
 
@@ -10,4 +10,3 @@ COPY . .
 
 EXPOSE 8080
 CMD [ "npm", "start" ]
-
