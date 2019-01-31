@@ -13,3 +13,7 @@ var formInclusaoNoticia = require('./app/routes/formulario_inclusao_noticia')(ap
 app.listen(3000, function(){
     console.log("Servidor ON");
 });
+
+// Callback é tipicamente passada como argumento de outra função 
+// ou chamada quando um evento for acontecido,  
+// ou quando uma parte do código receber uma resposta do que estava à espera.
