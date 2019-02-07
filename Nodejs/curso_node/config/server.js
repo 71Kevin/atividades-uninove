@@ -8,7 +8,11 @@ app.set('view engine', 'ejs');
 app.set('views', './app/views');
 // "views" é o diretorio de views padrão do Express, onde ele vai pesquisar as views | Local das views.
 
-consign().include('app/routes').into(app);
+consign()
+    .include('app/routes')
+    .then('config/dbConnection.js')
+    .then('app/models')
+    .into(app);
 // Está incluindo os arquivos de "routes" na exportação do "app" para o app.js.
 // Com isso não precisa mais fazer as importações na classe app.js, apenas a dessa (server.js).
 
